@@ -24,9 +24,10 @@ class Config {
         name: this.defaults.Database.Name || 'nodel2'
     }
 
-    static protocolVersion = 419;
+    static protocolVersion = 485;
 
-    static blowfishKey = '[;\'.]94-31==-%&@!^+]\u0000';
+    //static blowfishKey = '[;\'.]94-31==-%&@!^+]\u0000';
+    static blowfishKey = '_;5.]94-31==-%xT!^[$\u0000';
 
     static xorKey = [
         0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00

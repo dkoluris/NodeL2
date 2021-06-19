@@ -18,6 +18,8 @@ function serverList(session, buffer) {
         ]
     };
 
+    //console.log(data)
+
     if (data.sessionKey.isEqualTo(Config.sessionKey)) {
         session.sendData(
             AuthServerResponse.serverList(Config.gameServer.host, Config.gameServer.port)

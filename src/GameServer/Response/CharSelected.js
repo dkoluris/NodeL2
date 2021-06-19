@@ -6,7 +6,7 @@ function charSelected(player) {
     );
 
     packet
-        .writeC(0x21)
+        .writeC(0x15)
         .writeS(player.name)
         .writeD(player.id)
         .writeS(player.title)

@@ -4,7 +4,7 @@ function restart() {
     let packet = new ServerPacket(5);
 
     packet
-        .writeC(0x74)
+        .writeC(0x5f)
         .writeD(1);
 
     return packet.buffer;

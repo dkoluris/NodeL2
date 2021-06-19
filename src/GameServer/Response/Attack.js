@@ -4,7 +4,7 @@ function attack(player, npcId) {
     let packet = new ServerPacket(28);
 
     packet
-        .writeC(0x06)
+        .writeC(0x05)
         .writeD(player.id)
         .writeD(npcId)
         .writeD(1) // Damage

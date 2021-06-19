@@ -4,7 +4,7 @@ function getItem(playerId, item) {
     let packet = new ServerPacket(21);
 
     packet
-        .writeC(0x17)
+        .writeC(0x0d)
         .writeD(playerId)
         .writeD(item.id)
         .writeD(item.x)

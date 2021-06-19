@@ -4,7 +4,7 @@ function charSelectInfo(characters) {
     let packet = new ServerPacket(characters ? characters.length * 400 : 5);
 
     packet
-        .writeC(0x1f);
+        .writeC(0x13);
 
     if (characters) {
         packet

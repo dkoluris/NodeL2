@@ -4,7 +4,7 @@ function actionFailed(player) {
     let packet = new ServerPacket(5);
 
     packet
-        .writeC(0x35);
+        .writeC(0x25);
 
     return packet.buffer;
 }

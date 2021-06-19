@@ -4,7 +4,7 @@ function logoutOk() {
     let packet = new ServerPacket(1);
 
     packet
-        .writeC(0x96);
+        .writeC(0x7e);
 
     return packet.buffer;
 }

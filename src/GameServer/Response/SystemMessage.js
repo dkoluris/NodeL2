@@ -6,7 +6,7 @@ function systemMessage(hitDamage) {
     let packet = new ServerPacket(9 + (4 + 4));
 
     packet
-        .writeC(0x7a)
+        .writeC(0x64)
         .writeD(35) // Message ID
         .writeD(1) // Number of texts
         .writeD(1) // Type: Number = 0x01

@@ -3,7 +3,7 @@ let ServerPacket = invoke('ServerPacket');
 function serverList(host, port) {
     host = host.split('.');
 
-    let packet = new ServerPacket(20);
+    let packet = new ServerPacket(24);
 
     packet
         .writeC(0x04)
@@ -19,7 +19,9 @@ function serverList(host, port) {
         .writeC(0)       // PVP ? 1 = Yes, 0 = No
         .writeH(0)       // Current player
         .writeH(500)     // Max player
-        .writeC(1);      // Status ? 1 = Up, 0 = Down
+        .writeC(1)       // Status ? 1 = Up, 0 = Down
+        .writeD(0)
+        .writeC(0);
 
     return packet.buffer;
 }

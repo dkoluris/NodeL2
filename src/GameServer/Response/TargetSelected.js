@@ -4,7 +4,7 @@ function targetSelected(targetId) {
     let packet = new ServerPacket(7);
 
     packet
-        .writeC(0xbf)
+        .writeC(0xa6)
         .writeD(targetId)
         .writeH(0x00); // Mob color based on level difference
 

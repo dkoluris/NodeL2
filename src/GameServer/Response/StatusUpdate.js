@@ -4,7 +4,7 @@ function statusUpdate(id, hp, maxHp) {
     let packet = new ServerPacket(25);
 
     packet
-        .writeC(0x1a)
+        .writeC(0x0e)
         .writeD(id)
         .writeD(2)
         .writeD(0x09)

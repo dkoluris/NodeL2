@@ -4,7 +4,7 @@ function spawnItem(item) {
     let packet = new ServerPacket(29);
 
     packet
-        .writeC(0x15)
+        .writeC(0x0b)
         .writeD(item.id) // ID
         .writeD(item.itemId) // Item ID
         .writeD(item.x) // x

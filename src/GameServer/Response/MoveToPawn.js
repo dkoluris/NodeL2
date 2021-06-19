@@ -4,7 +4,7 @@ function moveToPawn(player, targetId, radius) {
     let packet = new ServerPacket(25);
 
     packet
-        .writeC(0x75)
+        .writeC(0x60)
         .writeD(player.id)
         .writeD(targetId)
         .writeD(20) // Distance

@@ -38,6 +38,10 @@ class AuthServerSession {
                 AuthClientRequest.serverList(this, decryptedPacket);
                 break;
 
+            case 0x07:
+                AuthClientRequest.authorizeGG(this, decryptedPacket);
+                break;
+
             default:
                 console.log('LS:: unknown opcode 0x%s', Utils.toHex(decryptedPacket[0], 2));
                 break;

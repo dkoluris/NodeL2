@@ -4,7 +4,7 @@ function die(id) {
     let packet = new ServerPacket(29);
 
     packet
-        .writeC(0x0b)
+        .writeC(0x06)
         .writeD(id)
         .writeD(1)
         .writeD(1)

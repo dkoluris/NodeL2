@@ -4,7 +4,7 @@ function deleteObject(id) {
     let packet = new ServerPacket(5);
 
     packet
-        .writeC(0x1e)
+        .writeC(0x12)
         .writeD(id);
 
     return packet.buffer;

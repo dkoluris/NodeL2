@@ -4,7 +4,7 @@ function npcInfo(npc) {
     let packet = new ServerPacket(600);
 
     packet
-        .writeC(0x22)
+        .writeC(0x16)
         .writeD(npc.id) // ObjectId
         .writeD(npc.npcId) // Id
         .writeD(npc.attackable) // Attackable = 0x01

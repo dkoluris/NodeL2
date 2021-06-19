@@ -4,7 +4,7 @@ function changeWaitType(player) {
     let packet = new ServerPacket(21);
 
     packet
-        .writeC( 0x3f)
+        .writeC( 0x2f)
         .writeD( player.id)
         .writeD(!player.state.raw.isSitting)
         .writeD( player.model.x)

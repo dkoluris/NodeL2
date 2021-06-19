@@ -4,7 +4,7 @@ function targetUnselected(player) {
     let packet = new ServerPacket(21);
 
     packet
-        .writeC(0x3a)
+        .writeC(0x2a)
         .writeD(player.id)  // Object ID
         .writeD(player.model.x)
         .writeD(player.model.y)

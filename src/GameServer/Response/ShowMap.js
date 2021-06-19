@@ -4,7 +4,7 @@ function showMap(itemId) {
     let packet = new ServerPacket(5);
 
     packet
-        .writeC(0xb6)
+        .writeC(0x9d)
         .writeD(itemId); // World = 1665, Elmore = 1863
 
     return packet.buffer;

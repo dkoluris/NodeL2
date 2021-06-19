@@ -4,7 +4,7 @@ function inventory(items) {
     let packet = new ServerPacket(5 + (28 * items.length));
 
     packet
-        .writeC(0x27)
+        .writeC(0x1b)
         .writeH(0x01)
         .writeH(items.length); // Items amount
 

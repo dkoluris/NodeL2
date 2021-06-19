@@ -6,6 +6,8 @@ let Utils = invoke('Utils');
 function authorizeLogin(session, buffer) {
     let packet = new ClientPacket(buffer);
 
+    //console.log(packet)
+
     packet
         .readC()
         .readB(14)  // Username
@@ -16,24 +18,28 @@ function authorizeLogin(session, buffer) {
         password: Utils.toAsciiStripNull(packet.data[2]),
     };
 
-    Database.getAccountPassword(data.username)
-        .then((rows) => {
+    session.sendData(
+        AuthServerResponse.loginOk()
+    );
 
-            if (rows[0]?.password === data.password) {
-                session.sendData(
-                    AuthServerResponse.loginOk()
-                );
-            }
-            else {
-                // 0x01 System error
-                // 0x02 Password does not match this account
-                // 0x04 Access failed
-                // 0x07 The account is already in use
-                session.sendData(
-                    AuthServerResponse.loginFail(0x02)
-                );
-            }
-        });
+    // Database.getAccountPassword(data.username)
+    //     .then((rows) => {
+
+    //         if (rows[0]?.password === data.password) {
+    //             session.sendData(
+    //                 AuthServerResponse.loginOk()
+    //             );
+    //         }
+    //         else {
+    //             // 0x01 System error
+    //             // 0x02 Password does not match this account
+    //             // 0x04 Access failed
+    //             // 0x07 The account is already in use
+    //             session.sendData(
+    //                 AuthServerResponse.loginFail(0x02)
+    //             );
+    //         }
+    //     });
 }
 
 module.exports = authorizeLogin;

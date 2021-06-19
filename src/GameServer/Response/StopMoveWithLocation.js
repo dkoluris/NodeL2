@@ -4,7 +4,7 @@ function stopMoveWithLocation(player) {
     let packet = new ServerPacket(17);
 
     packet
-        .writeC(0x5f)
+        .writeC(0x47)
         .writeD(player.id)
         .writeD(player.model.x)
         .writeD(player.model.y)

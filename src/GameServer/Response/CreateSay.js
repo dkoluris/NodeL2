@@ -4,7 +4,7 @@ function createSay(player, text, type) {
     let packet = new ServerPacket(9 + ServerPacket.strlen(player.name) + ServerPacket.strlen(text));
 
     packet
-        .writeC(0x5d)
+        .writeC(0x4a)
         .writeD(player.id)
         .writeD(type)
         .writeS(player.name)

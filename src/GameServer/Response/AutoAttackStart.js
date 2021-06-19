@@ -4,7 +4,7 @@ function autoAttackStart(id) {
     let packet = new ServerPacket(5);
 
     packet
-        .writeC(0x3b)
+        .writeC(0x2b)
         .writeD(id);
 
     return packet.buffer;

@@ -4,7 +4,7 @@ function questList() {
     let packet = new ServerPacket(5);
 
     packet
-        .writeC(0x98)
+        .writeC(0x80)
         .writeH(0x00)
         .writeH(0x00);
 
